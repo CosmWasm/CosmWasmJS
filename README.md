@@ -37,16 +37,27 @@ async function main() {
 main();
 ```
 
-### Get a signing stargate client
+### Create a wallet and a signing stargate client
 
 ```ts
-import { StargateSigningClient } from "cosmwasm";
+import { StargateSigningClient, Secp256k1HdWallet } from "cosmwasm";
 
 // This is your rpc endpoint
 const rpcEndpoint = "https://rpc.cliffnet.cosmwasm.com:443/";
 
+// Using a random generated mnemonic
+const mnemonic = "rifle same bitter control garage duck grab spare mountain doctor rubber cook";
+
 async function main() {
-  const client = await StargateClient.connectWithSigner(endpoint, wallet);
+
+  // Create a wallet
+  const wallet = await Secp256k1HdWallet.fromMnemonic(mnemonic);
+
+  // Using
+  const client = await StargateSigningClient.connectWithSigner(
+    endpoint,
+    wallet
+  );
   console.log(client);
 }
 
