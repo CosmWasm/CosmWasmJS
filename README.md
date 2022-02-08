@@ -30,7 +30,7 @@ import { CosmWasmClient } from "cosmwasm";
 const rpcEndpoint = "https://rpc.cliffnet.cosmwasm.com:443/";
 
 async function main() {
-  const client = await CosmWasmClient.connect(endpoint);
+  const client = await CosmWasmClient.connect(rpcEndpoint);
   console.log(client);
 }
 
@@ -55,7 +55,7 @@ async function main() {
 
   // Using
   const client = await StargateSigningClient.connectWithSigner(
-    endpoint,
+    rpcEndpoint,
     wallet
   );
   console.log(client);
@@ -73,10 +73,10 @@ import { CosmWasmClient } from "cosmwasm";
 const rpcEndpoint = "https://rpc.cliffnet.cosmwasm.com:443/";
 
 // This is your contract address
-const contractAddr = "wasm123";
+const contractAddr = "wasm19qws2lfd8pskyn0cfgpl5yjjyq3msy5402qr8nkzff9kdnkaepyqycedfh";
 
 async function main() {
-  const client = await CosmWasmClient.connect(endpoint);
+  const client = await CosmWasmClient.connect(rpcEndpoint);
   const config = await client.queryContractSmart(contractAddr, { config: {} });
 
   console.log(config);
