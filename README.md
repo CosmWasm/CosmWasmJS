@@ -24,13 +24,13 @@ It is just a wrapper package to easily import needed features from CosmJs.
 ### Get a read-only stargate client
 
 ```ts
-import { StargateClient } from "cosmwasm";
+import { CosmWasmClient } from "cosmwasm";
 
 // This is your rpc endpoint
-const endpoint = "https://rpc.cliffnet.cosmwasm.com:443/";
+const rpcEndpoint = "https://rpc.cliffnet.cosmwasm.com:443/";
 
 async function main() {
-  const client = await StargateClient.connect(endpoint);
+  const client = await CosmWasmClient.connect(endpoint);
   console.log(client);
 }
 
@@ -43,7 +43,7 @@ main();
 import { StargateSigningClient } from "cosmwasm";
 
 // This is your rpc endpoint
-const endpoint = "https://rpc.cliffnet.cosmwasm.com:443/";
+const rpcEndpoint = "https://rpc.cliffnet.cosmwasm.com:443/";
 
 async function main() {
   const client = await StargateClient.connectWithSigner(endpoint, wallet);
@@ -59,7 +59,7 @@ main();
 import { CosmWasmClient } from "cosmwasm";
 
 // This is your rpc endpoint
-const endpoint = "https://rpc.cliffnet.cosmwasm.com:443/";
+const rpcEndpoint = "https://rpc.cliffnet.cosmwasm.com:443/";
 
 // This is your contract address
 const contractAddr = "wasm123";
