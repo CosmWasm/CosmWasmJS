@@ -56,7 +56,7 @@ main();
 ### Interacting with contracts
 
 ```ts
-import { StargateSigningClient } from "cosmwasm";
+import { CosmWasmClient } from "cosmwasm";
 
 // This is your rpc endpoint
 const endpoint = "https://rpc.cliffnet.cosmwasm.com:443/";
