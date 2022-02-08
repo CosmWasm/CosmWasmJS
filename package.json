@@ -1,19 +1,44 @@
 {
   "name": "cosmwasm",
-  "version": "0.0.1",
-  "description": "A CosmJS wrapper for CosmWasm projects",
-  "main": "index.js",
+  "version": "0.27.1",
+  "description": "A wrapper package for all relevant cosmjs packages.",
+  "main": "build/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf ./build && tsc"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/confio/cosmwasm.js.git"
   },
-  "author": "",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "contributors": [
+    {
+      "name": "Simon Warta",
+      "email": "webmaster128@users.noreply.github.com"
+    },
+    {
+      "name": "Milan Steiner",
+      "email": "msteiner96@users.noreply.github.com"
+    }
+  ],
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/confio/cosmwasm.js/issues"
   },
-  "homepage": "https://github.com/confio/cosmwasm.js#readme"
+  "homepage": "https://github.com/confio/cosmwasm.js#readme",
+  "dependencies": {
+    "@cosmjs/amino": "0.27.1",
+    "@cosmjs/cosmwasm-stargate": "0.27.1",
+    "@cosmjs/crypto": "0.27.1",
+    "@cosmjs/encoding": "0.27.1",
+    "@cosmjs/proto-signing": "0.27.1",
+    "@cosmjs/stargate": "0.27.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  }
 }
