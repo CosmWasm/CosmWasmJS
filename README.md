@@ -5,7 +5,7 @@
 ## About
 
 Cosmwasm.js was created to help new developers get started with their first dApps.
-It is just a wrapper package to easily import needed features from CosmJs.
+It is just a wrapper package to easily import needed features from CosmJS.
 
 ## Get started
 
