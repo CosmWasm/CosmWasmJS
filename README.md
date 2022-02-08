@@ -46,7 +46,7 @@ import { StargateSigningClient } from "cosmwasm";
 const endpoint = "https://rpc.cliffnet.cosmwasm.com:443/";
 
 async function main() {
-  const client = await StargateClient.connect(endpoint);
+  const client = await StargateClient.connectWithSigner(endpoint, wallet);
   console.log(client);
 }
 
