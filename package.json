@@ -1,6 +1,6 @@
 {
   "name": "cosmwasm",
-  "version": "0.27.0",
+  "version": "0.27.1",
   "description": "A wrapper package for all relevant cosmjs packages.",
   "main": "build/index.js",
   "scripts": {
@@ -31,12 +31,12 @@
   },
   "homepage": "https://github.com/confio/cosmwasm.js#readme",
   "dependencies": {
-    "@cosmjs/amino": "0.27.0",
-    "@cosmjs/cosmwasm-stargate": "0.27.0",
-    "@cosmjs/crypto": "0.27.0",
-    "@cosmjs/encoding": "0.27.0",
-    "@cosmjs/proto-signing": "0.27.0",
-    "@cosmjs/stargate": "0.27.0"
+    "@cosmjs/amino": "0.27.1",
+    "@cosmjs/cosmwasm-stargate": "0.27.1",
+    "@cosmjs/crypto": "0.27.1",
+    "@cosmjs/encoding": "0.27.1",
+    "@cosmjs/proto-signing": "0.27.1",
+    "@cosmjs/stargate": "0.27.1"
   },
   "devDependencies": {
     "typescript": "^4.5.5"
