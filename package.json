@@ -15,7 +15,16 @@
     "access": "public",
     "registry": "https://registry.npmjs.org"
   },
-  "author": "Milan Steiner <msteiner96@users.noreply.github.com>",
+  "contributors": [
+    {
+      "name": "Simon Warta",
+      "email": "webmaster128@users.noreply.github.com"
+    },
+    {
+      "name": "Milan Steiner",
+      "email": "msteiner96@users.noreply.github.com"
+    }
+  ],
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/confio/cosmwasm.js/issues"

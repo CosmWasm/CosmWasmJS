@@ -4,6 +4,7 @@ export {
     InstantiateOptions,
     InstantiateResult,
     MigrateResult,
+    CosmWasmClient,
     SigningCosmWasmClient,
     SigningCosmWasmClientOptions,
     UploadResult,
