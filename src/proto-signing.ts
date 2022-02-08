@@ -1,0 +1,23 @@
+export {
+  DecodedTxRaw,
+  decodeTxRaw,
+  DirectSecp256k1HdWallet,
+  DirectSecp256k1HdWalletOptions,
+  DirectSecp256k1Wallet,
+  decodePubkey,
+  encodePubkey,
+  DecodeObject,
+  EncodeObject,
+  GeneratedType,
+  isPbjsGeneratedType,
+  isTsProtoGeneratedType,
+  isTxBodyEncodeObject,
+  PbjsGeneratedType,
+  Registry,
+  TsProtoGeneratedType,
+  TxBodyEncodeObject,
+  DirectSignResponse,
+  isOfflineDirectSigner,
+  OfflineDirectSigner,
+  OfflineSigner
+} from "@cosmjs/proto-signing";
