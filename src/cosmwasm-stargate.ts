@@ -7,5 +7,5 @@ export {
     CosmWasmClient,
     SigningCosmWasmClient,
     SigningCosmWasmClientOptions,
-    UploadResult,
-  } from "@cosmjs/cosmwasm-stargate";
+    UploadResult
+} from "@cosmjs/cosmwasm-stargate";

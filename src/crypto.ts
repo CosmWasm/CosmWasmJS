@@ -1,4 +1,4 @@
 export {
-  HdPath,
-  pathToString,
+    HdPath,
+    pathToString
 } from "@cosmjs/crypto";
