@@ -21,7 +21,7 @@ It is just a wrapper package to easily import needed features from CosmJS.
 
 ## Usage
 
-### Get a read-only stargate client
+### Get a read-only cosmwasm client
 
 ```ts
 import { CosmWasmClient } from "cosmwasm";
