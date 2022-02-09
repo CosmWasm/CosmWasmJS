@@ -3,7 +3,7 @@
  */
 
 // Check if keplr is installed and supported
-export const checkExtensionAndBrowser = () => {
+export function checkExtensionAndBrowser() : boolean {
     if (typeof window !== `undefined`) {
       if (
         window.getOfflineSigner &&

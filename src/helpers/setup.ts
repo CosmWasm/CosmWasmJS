@@ -11,11 +11,10 @@
 import { checkExtensionAndBrowser } from "./keplr";
 import { SigningCosmWasmClient } from "../cosmwasm-stargate";
 
-export const setupKeplrWeb = async (
+export async function setupKeplrWeb(
   chainId: string,
   rpcEndpoint: string
-): Promise<SigningCosmWasmClient> => {
-
+): Promise<SigningCosmWasmClient> {
   // check browser compatibility
   if (!checkExtensionAndBrowser()) {
     throw new Error("Keplr is not supported or installed on this browser!");
@@ -23,23 +22,23 @@ export const setupKeplrWeb = async (
 
   // try to enable keplr with given chainId
   await window.keplr.enable(chainId).catch((e) => {
-    throw new Error("Keplr can't connect to this chainId");
+    throw new Error("Keplr can't connect to this chainId!");
   });
 
   // Setup signer
-  const offlineSigner = await window.getOfflineSignerAuto(chain.chain_id);
+  const offlineSigner = await window.getOfflineSignerAuto(chainId);
 
   // Get Accounts
-  const accounts = await offlineSigner
-    .getAccounts()
-    .catch((e) => console.log(e));
+  const [firstAccount] = await offlineSigner.getAccounts().catch((e) => {
+    throw new Error("Can't get an account!");
+  });
 
   // Init SigningCosmWasmClient client
   const signingClient = await SigningCosmWasmClient.connectWithSigner(
     rpcEndpoint,
     offlineSigner,
-    accounts[0].address
+    firstAccount
   );
 
   return signingClient;
-};
+}
