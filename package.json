@@ -36,7 +36,8 @@
     "@cosmjs/crypto": "0.27.1",
     "@cosmjs/encoding": "0.27.1",
     "@cosmjs/proto-signing": "0.27.1",
-    "@cosmjs/stargate": "0.27.1"
+    "@cosmjs/stargate": "0.27.1",
+    "@cosmjs/faucet-client": "0.27.1"
   },
   "devDependencies": {
     "typescript": "^4.5.5"
