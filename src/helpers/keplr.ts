@@ -12,10 +12,10 @@ export function checkExtensionAndBrowser() : boolean {
       ) {
         return true;
       } else {
-        console.log("Keplr extension not found", window);
+        console.error("Keplr extension not found", window);
       }
     } else {
-      console.log("Window is undefined :|", window);
+      console.error("Window is undefined :|", window);
     }
     return false;
   };
