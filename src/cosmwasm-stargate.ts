@@ -1,11 +1,11 @@
 export {
-    ChangeAdminResult,
-    ExecuteResult,
-    InstantiateOptions,
-    InstantiateResult,
-    MigrateResult,
-    CosmWasmClient,
-    SigningCosmWasmClient,
-    SigningCosmWasmClientOptions,
-    UploadResult,
-  } from "@cosmjs/cosmwasm-stargate";
+  ChangeAdminResult,
+  CosmWasmClient,
+  ExecuteResult,
+  InstantiateOptions,
+  InstantiateResult,
+  MigrateResult,
+  SigningCosmWasmClient,
+  SigningCosmWasmClientOptions,
+  UploadResult,
+} from "@cosmjs/cosmwasm-stargate";
