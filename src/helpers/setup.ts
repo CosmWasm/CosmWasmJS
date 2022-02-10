@@ -8,6 +8,7 @@
  *  (c) Node / Local Mnemonic
  *  (d) Node / Ledger
  */
+import TransportNodeHid from "@ledgerhq/hw-transport-node-hid";
 import TransportWebUSB from "@ledgerhq/hw-transport-webusb";
 
 import { SigningCosmWasmClient } from "../cosmwasm-stargate";
@@ -33,7 +34,7 @@ interface Config {
  * @param config
  * @returns SigningCosmWasmClient
  */
-export async function setupKeplrWeb(config: Config): Promise<SigningCosmWasmClient> {
+export async function setupWebKeplr(config: Config): Promise<SigningCosmWasmClient> {
   // check browser compatibility
   if (!window.keplr) {
     throw new Error("Keplr is not supported or installed on this browser!");
@@ -60,14 +61,16 @@ export async function setupKeplrWeb(config: Config): Promise<SigningCosmWasmClie
 
 /**
  * (b) Web / Ledger
- * Returns a signing client after the usergave permissions.
+ * Returns a signing client after the user gave permissions.
  *
  * @param config
- * @returns
+ * @returns SigningCosmWasmClient
  */
-export async function setupLedgerWeb(config: Config): Promise<SigningCosmWasmClient> {
+export async function setupWebLedger(config: Config): Promise<SigningCosmWasmClient> {
   const { prefix, gasPrice } = config;
   const interactiveTimeout = 120_000;
+
+  // Prepare ledger
   const ledgerTransport = await TransportWebUSB.create(interactiveTimeout, interactiveTimeout);
 
   // Setup signer
@@ -103,6 +106,34 @@ export async function setupNodeLocal(config: Config, mnemonic: string): Promise<
   const client = await SigningCosmWasmClient.connectWithSigner(config.rpcEndpoint, offlineSigner, {
     prefix,
     gasPrice,
+  });
+
+  return client;
+}
+
+/**
+ * (d) Node / Ledger
+ * Returns a signing client after the user gave permissions.
+ *
+ * @param config
+ * @returns SigningCosmWasmClient
+ */
+export async function setupNodeLedger(config: Config): Promise<SigningCosmWasmClient> {
+  const { prefix, gasPrice } = config;
+  const interactiveTimeout = 120_000;
+
+  // Prepare ledger
+  const ledgerTransport = await TransportNodeHid.create(interactiveTimeout, interactiveTimeout);
+
+  // Setup signer
+  const offlineSigner = new LedgerSigner(ledgerTransport, {
+    hdPaths: [makeCosmoshubPath(0)],
+    prefix: prefix,
+  });
+
+  const client = await SigningCosmWasmClient.connectWithSigner(config.rpcEndpoint, offlineSigner, {
+    prefix: prefix,
+    gasPrice: gasPrice,
   });
 
   return client;
