@@ -1,4 +1,1 @@
-export {
-    HdPath,
-    pathToString
-} from "@cosmjs/crypto";
+export { HdPath, pathToString } from "@cosmjs/crypto";
