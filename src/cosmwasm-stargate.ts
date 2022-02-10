@@ -9,5 +9,5 @@ export {
   SigningCosmWasmClientOptions,
   UploadResult,
   toBinary,
-  fromBinary
+  fromBinary,
 } from "@cosmjs/cosmwasm-stargate";
