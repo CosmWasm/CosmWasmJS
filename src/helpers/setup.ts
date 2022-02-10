@@ -11,7 +11,6 @@
 import { SigningCosmWasmClient } from "../cosmwasm-stargate";
 import { DirectSecp256k1HdWallet } from "../proto-signing";
 import { GasPrice } from "../stargate";
-import { checkExtensionAndBrowser } from "./keplr";
 
 /**
  * All setup functions are using the same config pattern
@@ -33,7 +32,7 @@ interface Config {
  */
 export async function setupKeplrWeb(config: Config): Promise<SigningCosmWasmClient> {
   // check browser compatibility
-  if (!checkExtensionAndBrowser()) {
+  if (!window.keplr) {
     throw new Error("Keplr is not supported or installed on this browser!");
   }
 
