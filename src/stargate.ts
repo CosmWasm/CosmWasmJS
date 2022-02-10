@@ -1,1 +1,1 @@
-export { Block, GasPrice, IndexedTx, QueryClient } from "@cosmjs/stargate";
+export { Block, GasPrice, IndexedTx, makeCosmoshubPath, QueryClient } from "@cosmjs/stargate";

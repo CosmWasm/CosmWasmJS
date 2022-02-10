@@ -8,9 +8,12 @@
  *  (c) Node / Local Mnemonic
  *  (d) Node / Ledger
  */
+import TransportWebUSB from "@ledgerhq/hw-transport-webusb";
+
 import { SigningCosmWasmClient } from "../cosmwasm-stargate";
+import { LedgerSigner } from "../ledger-amino";
 import { DirectSecp256k1HdWallet } from "../proto-signing";
-import { GasPrice } from "../stargate";
+import { GasPrice, makeCosmoshubPath } from "../stargate";
 
 /**
  * All setup functions are using the same config pattern
@@ -56,6 +59,33 @@ export async function setupKeplrWeb(config: Config): Promise<SigningCosmWasmClie
 }
 
 /**
+ * (b) Web / Ledger
+ * Returns a signing client after the usergave permissions.
+ *
+ * @param config
+ * @returns
+ */
+export async function setupLedgerWeb(config: Config): Promise<SigningCosmWasmClient> {
+  const { prefix, gasPrice } = config;
+  const interactiveTimeout = 120_000;
+  const ledgerTransport = await TransportWebUSB.create(interactiveTimeout, interactiveTimeout);
+
+  // Setup signer
+  const offlineSigner = new LedgerSigner(ledgerTransport, {
+    hdPaths: [makeCosmoshubPath(0)],
+    prefix: prefix,
+  });
+
+  // Init SigningCosmWasmClient client
+  const client = await SigningCosmWasmClient.connectWithSigner(config.rpcEndpoint, offlineSigner, {
+    prefix,
+    gasPrice,
+  });
+
+  return client;
+}
+
+/**
  * (c) Node / Local Mnemonic
  * Using a local mnemonic and returns a signing clien
  *
@@ -66,11 +96,11 @@ export async function setupKeplrWeb(config: Config): Promise<SigningCosmWasmClie
 export async function setupNodeLocal(config: Config, mnemonic: string): Promise<SigningCosmWasmClient> {
   const { prefix, gasPrice } = config;
 
-  // Get Wallet
-  const wallet = await DirectSecp256k1HdWallet.fromMnemonic(mnemonic, { prefix });
+  // Setup signer
+  const offlineSigner = await DirectSecp256k1HdWallet.fromMnemonic(mnemonic, { prefix });
 
   // Init SigningCosmWasmClient client
-  const client = await SigningCosmWasmClient.connectWithSigner(config.rpcEndpoint, wallet, {
+  const client = await SigningCosmWasmClient.connectWithSigner(config.rpcEndpoint, offlineSigner, {
     prefix,
     gasPrice,
   });
