@@ -1,6 +1,9 @@
-# cosmwasm.js
 
-[![npm version](https://img.shields.io/npm/v/cosmwasm.svg)](https://www.npmjs.com/package/cosmwasm)
+<h1><p align="center"><img alt="CosmJS" src="docs/logo.png" width="180" /></p></h1>
+
+<div align="center">
+  <a href="https://www.npmjs.com/package/cosmwasm"><img alt="npm" src="https://img.shields.io/npm/v/cosmwasm.svg"/></a>
+</div>
 
 ## About
 
