@@ -8,7 +8,8 @@
  *  (c) Node / Local Mnemonic
  *  (d) Node / Ledger
  */
-import { GasPrice, SigningCosmWasmClient } from "..";
+import { SigningCosmWasmClient } from "../cosmwasm-stargate";
+import { GasPrice } from "../stargate";
 import { checkExtensionAndBrowser } from "./keplr";
 
 /**
