@@ -1,11 +1,11 @@
-import {
-  toAscii,
-  fromAscii,
-  toUtf8,
-  fromUtf8,
-  toBase64,
-  fromBase64,
-  toHex,
-  fromHex,
+export {
   Bech32,
+  fromAscii,
+  fromBase64,
+  fromHex,
+  fromUtf8,
+  toAscii,
+  toBase64,
+  toHex,
+  toUtf8,
 } from "@cosmjs/encoding";
