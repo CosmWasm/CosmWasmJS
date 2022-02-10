@@ -9,6 +9,7 @@
  *  (d) Node / Ledger
  */
 import { SigningCosmWasmClient } from "../cosmwasm-stargate";
+import { DirectSecp256k1HdWallet } from "../proto-signing";
 import { GasPrice } from "../stargate";
 import { checkExtensionAndBrowser } from "./keplr";
 
@@ -27,9 +28,8 @@ interface Config {
  * Prompts keplr and returns a signing client after the user
  * gave permissions.
  *
- * @param chainId
- * @param rpcEndpoint
- * @returns
+ * @param config
+ * @returns SigningCosmWasmClient
  */
 export async function setupKeplrWeb(config: Config): Promise<SigningCosmWasmClient> {
   // check browser compatibility
@@ -42,20 +42,39 @@ export async function setupKeplrWeb(config: Config): Promise<SigningCosmWasmClie
     throw new Error("Keplr can't connect to this chainId!");
   });
 
+  const { prefix, gasPrice } = config;
+
   // Setup signer
   const offlineSigner = await window.getOfflineSignerAuto(config.chainId);
 
-  // Get Accounts
-  const [firstAccount] = await offlineSigner.getAccounts().catch(() => {
-    throw new Error("Can't get an account!");
+  // Init SigningCosmWasmClient client
+  const signingClient = await SigningCosmWasmClient.connectWithSigner(config.rpcEndpoint, offlineSigner, {
+    prefix,
+    gasPrice,
   });
 
-  // Init SigningCosmWasmClient client
-  const signingClient = await SigningCosmWasmClient.connectWithSigner(
-    config.rpcEndpoint,
-    offlineSigner,
-    firstAccount,
-  );
-
   return signingClient;
+}
+
+/**
+ * (c) Node / Local Mnemonic
+ * Using a local mnemonic and returns a signing clien
+ *
+ * @param config
+ * @param mnemonic
+ * @returns SigningCosmWasmClient
+ */
+export async function setupNodeLocal(config: Config, mnemonic: string): Promise<SigningCosmWasmClient> {
+  const { prefix, gasPrice } = config;
+
+  // Get Wallet
+  const wallet = await DirectSecp256k1HdWallet.fromMnemonic(mnemonic, { prefix });
+
+  // Init SigningCosmWasmClient client
+  const client = await SigningCosmWasmClient.connectWithSigner(config.rpcEndpoint, wallet, {
+    prefix,
+    gasPrice,
+  });
+
+  return client;
 }

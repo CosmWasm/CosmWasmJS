@@ -12,4 +12,4 @@ export * from "./stargate";
 /**
  * Exporting CosmWasmJs Helpers
  */
-export { setupKeplrWeb } from "./helpers/setup";
+export { setupKeplrWeb, setupNodeLocal } from "./helpers/setup";
