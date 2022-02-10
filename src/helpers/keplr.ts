@@ -3,20 +3,15 @@
  */
 
 // Check if keplr is installed and supported
-export function checkExtensionAndBrowser() : boolean {
-    if (typeof window !== `undefined`) {
-      if (
-        window.getOfflineSigner &&
-        window.keplr &&
-        window.keplr.experimentalSuggestChain
-      ) {
-        return true;
-      } else {
-        console.error("Keplr extension not found", window);
-      }
+export function checkExtensionAndBrowser(): boolean {
+  if (typeof window !== `undefined`) {
+    if (window.getOfflineSigner && window.keplr && window.keplr.experimentalSuggestChain) {
+      return true;
     } else {
-      console.error("Window is undefined :|", window);
+      console.error("Keplr extension not found", window);
     }
-    return false;
-  };
-  
+  } else {
+    console.error("Window is undefined :|", window);
+  }
+  return false;
+}
