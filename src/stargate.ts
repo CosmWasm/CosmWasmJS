@@ -1,8 +1,1 @@
-export {
-  Block,
-  GasPrice,
-  IndexedTx,
-  QueryClient,
-  SigningStargateClient,
-  StargateClient,
-} from "@cosmjs/stargate";
+export { Block, GasPrice, IndexedTx, QueryClient } from "@cosmjs/stargate";
