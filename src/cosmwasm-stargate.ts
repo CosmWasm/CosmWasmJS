@@ -8,4 +8,6 @@ export {
   SigningCosmWasmClient,
   SigningCosmWasmClientOptions,
   UploadResult,
+  toBinary,
+  fromBinary
 } from "@cosmjs/cosmwasm-stargate";
