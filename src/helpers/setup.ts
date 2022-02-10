@@ -8,22 +8,41 @@
  *  (c) Node / Local Mnemonic
  *  (d) Node / Ledger
  */
-import { SigningCosmWasmClient } from "../cosmwasm-stargate";
+import { GasPrice, SigningCosmWasmClient } from "..";
 import { checkExtensionAndBrowser } from "./keplr";
 
-export async function setupKeplrWeb(chainId: string, rpcEndpoint: string): Promise<SigningCosmWasmClient> {
+/**
+ * All setup functions are using the same config pattern
+ */
+interface Config {
+  chainId: string;
+  rpcEndpoint: string;
+  gasPrice?: GasPrice;
+  prefix?: string;
+}
+
+/**
+ * (a) Web / Keplr
+ * Prompts keplr and returns a signing client after the user
+ * gave permissions.
+ *
+ * @param chainId
+ * @param rpcEndpoint
+ * @returns
+ */
+export async function setupKeplrWeb(config: Config): Promise<SigningCosmWasmClient> {
   // check browser compatibility
   if (!checkExtensionAndBrowser()) {
     throw new Error("Keplr is not supported or installed on this browser!");
   }
 
   // try to enable keplr with given chainId
-  await window.keplr.enable(chainId).catch(() => {
+  await window.keplr.enable(config.chainId).catch(() => {
     throw new Error("Keplr can't connect to this chainId!");
   });
 
   // Setup signer
-  const offlineSigner = await window.getOfflineSignerAuto(chainId);
+  const offlineSigner = await window.getOfflineSignerAuto(config.chainId);
 
   // Get Accounts
   const [firstAccount] = await offlineSigner.getAccounts().catch(() => {
@@ -32,7 +51,7 @@ export async function setupKeplrWeb(chainId: string, rpcEndpoint: string): Promi
 
   // Init SigningCosmWasmClient client
   const signingClient = await SigningCosmWasmClient.connectWithSigner(
-    rpcEndpoint,
+    config.rpcEndpoint,
     offlineSigner,
     firstAccount,
   );
