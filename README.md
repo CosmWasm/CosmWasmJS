@@ -40,7 +40,7 @@ main();
 ### Create a wallet and a signing stargate client
 
 ```ts
-import { StargateSigningClient, Secp256k1HdWallet } from "cosmwasm";
+import { SigningCosmWasmClient, Secp256k1HdWallet } from "cosmwasm";
 
 // This is your rpc endpoint
 const rpcEndpoint = "https://rpc.cliffnet.cosmwasm.com:443/";
@@ -54,7 +54,7 @@ async function main() {
   const wallet = await Secp256k1HdWallet.fromMnemonic(mnemonic);
 
   // Using
-  const client = await StargateSigningClient.connectWithSigner(
+  const client = await SigningCosmWasmClient.connectWithSigner(
     rpcEndpoint,
     wallet
   );
