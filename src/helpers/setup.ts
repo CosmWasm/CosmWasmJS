@@ -11,10 +11,11 @@
 import TransportNodeHid from "@ledgerhq/hw-transport-node-hid";
 import TransportWebUSB from "@ledgerhq/hw-transport-webusb";
 
+import { makeCosmoshubPath } from "../amino";
 import { SigningCosmWasmClient } from "../cosmwasm-stargate";
 import { LedgerSigner } from "../ledger-amino";
 import { DirectSecp256k1HdWallet } from "../proto-signing";
-import { GasPrice, makeCosmoshubPath } from "../stargate";
+import { GasPrice } from "../stargate";
 
 /**
  * All setup functions are using the same config pattern
