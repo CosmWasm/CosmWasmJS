@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/confio/cosmwasm.js.git"
+    "url": "git+https://github.com/CosmWasm/CosmWasmJS.git"
   },
   "publishConfig": {
     "access": "public",
@@ -28,9 +28,9 @@
   ],
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/confio/cosmwasm.js/issues"
+    "url": "https://github.com/CosmWasm/CosmWasmJS/issues"
   },
-  "homepage": "https://github.com/confio/cosmwasm.js#readme",
+  "homepage": "https://github.com/CosmWasm/CosmWasmJS#readme",
   "dependencies": {
     "@cosmjs/amino": "0.27.1",
     "@cosmjs/cosmwasm-stargate": "0.27.1",
