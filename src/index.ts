@@ -1,5 +1,5 @@
 /**
- * Exporting all the defined cosmJS symbols
+ * Exporting all the defined CosmJS symbols
  */
 export * from "./amino";
 export * from "./cosmwasm-stargate";
