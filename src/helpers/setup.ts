@@ -8,9 +8,6 @@
  *  (c) Node / Local Mnemonic
  *  (d) Node / Ledger
  */
-import TransportNodeHid from "@ledgerhq/hw-transport-node-hid";
-import TransportWebUSB from "@ledgerhq/hw-transport-webusb";
-
 import { makeCosmoshubPath } from "../amino";
 import { SigningCosmWasmClient } from "../cosmwasm-stargate";
 import { LedgerSigner } from "../ledger-amino";
@@ -23,8 +20,8 @@ import { GasPrice } from "../stargate";
 interface Config {
   chainId: string;
   rpcEndpoint: string;
+  prefix: string;
   gasPrice?: GasPrice;
-  prefix?: string;
 }
 
 /**
@@ -67,12 +64,12 @@ export async function setupWebKeplr(config: Config): Promise<SigningCosmWasmClie
  * @param config
  * @returns SigningCosmWasmClient
  */
-export async function setupWebLedger(config: Config): Promise<SigningCosmWasmClient> {
+export async function setupWebLedger(config: Config, transport: any): Promise<SigningCosmWasmClient> {
   const { prefix, gasPrice } = config;
   const interactiveTimeout = 120_000;
 
   // Prepare ledger
-  const ledgerTransport = await TransportWebUSB.create(interactiveTimeout, interactiveTimeout);
+  const ledgerTransport = await transport.create(interactiveTimeout, interactiveTimeout);
 
   // Setup signer
   const offlineSigner = new LedgerSigner(ledgerTransport, {
@@ -119,12 +116,12 @@ export async function setupNodeLocal(config: Config, mnemonic: string): Promise<
  * @param config
  * @returns SigningCosmWasmClient
  */
-export async function setupNodeLedger(config: Config): Promise<SigningCosmWasmClient> {
+export async function setupNodeLedger(config: Config, transport: any): Promise<SigningCosmWasmClient> {
   const { prefix, gasPrice } = config;
   const interactiveTimeout = 120_000;
 
   // Prepare ledger
-  const ledgerTransport = await TransportNodeHid.create(interactiveTimeout, interactiveTimeout);
+  const ledgerTransport = await transport.create(interactiveTimeout, interactiveTimeout);
 
   // Setup signer
   const offlineSigner = new LedgerSigner(ledgerTransport, {

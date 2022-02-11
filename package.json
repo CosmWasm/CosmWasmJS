@@ -39,9 +39,7 @@
     "@cosmjs/faucet-client": "0.27.1",
     "@cosmjs/ledger-amino": "0.27.1",
     "@cosmjs/proto-signing": "0.27.1",
-    "@cosmjs/stargate": "0.27.1",
-    "@ledgerhq/hw-transport-node-hid": "^6.24.1",
-    "@ledgerhq/hw-transport-webusb": "6.24.1"
+    "@cosmjs/stargate": "0.27.1"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.11.0",
