@@ -83,6 +83,12 @@ export async function setupWebLedger(config: Config, transport: any): Promise<Si
     gasPrice,
   });
 
+  const chainId = await client.getChainId();
+
+  if (chainId !== config.chainId) {
+    throw Error("Given ChainId doesn't match the clients ChainID!");
+  }
+
   return client;
 }
 
@@ -105,6 +111,12 @@ export async function setupNodeLocal(config: Config, mnemonic: string): Promise<
     prefix,
     gasPrice,
   });
+
+  const chainId = await client.getChainId();
+
+  if (chainId !== config.chainId) {
+    throw Error("Given ChainId doesn't match the clients ChainID!");
+  }
 
   return client;
 }
@@ -133,6 +145,12 @@ export async function setupNodeLedger(config: Config, transport: any): Promise<S
     prefix: prefix,
     gasPrice: gasPrice,
   });
+
+  const chainId = await client.getChainId();
+
+  if (chainId !== config.chainId) {
+    throw Error("Given ChainId doesn't match the clients ChainID!");
+  }
 
   return client;
 }
