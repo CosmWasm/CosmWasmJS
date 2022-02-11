@@ -10,6 +10,6 @@ export * from "./proto-signing";
 export * from "./stargate";
 
 /**
- * Exporting CosmWasmJs Helpers
+ * Exporting CosmWasmJS Helpers
  */
 export { setupNodeLedger, setupNodeLocal, setupWebKeplr, setupWebLedger } from "./helpers/setup";
