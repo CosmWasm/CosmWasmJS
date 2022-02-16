@@ -80,6 +80,7 @@ const config = {
 
 async function main() {
   const client = await setupWebKeplr(config);
+  console.log(client);
 }
 
 main();
