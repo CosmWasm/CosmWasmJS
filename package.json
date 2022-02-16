@@ -42,6 +42,7 @@
     "@cosmjs/stargate": "0.27.1"
   },
   "devDependencies": {
+    "@types/ledgerhq__hw-transport": "^4.21.4",
     "@typescript-eslint/eslint-plugin": "^5.11.0",
     "@typescript-eslint/parser": "^5.11.0",
     "eslint": "^7.32.0",

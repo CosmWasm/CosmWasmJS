@@ -24,6 +24,9 @@ interface Config {
   gasPrice?: GasPrice;
 }
 
+// Window has to be re-declared to get keplr working
+declare const window: any;
+
 /**
  * (a) Web / Keplr
  * Prompts keplr and returns a signing client after the user
