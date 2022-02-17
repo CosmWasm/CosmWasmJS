@@ -37,10 +37,12 @@
     "@cosmjs/crypto": "0.27.1",
     "@cosmjs/encoding": "0.27.1",
     "@cosmjs/faucet-client": "0.27.1",
+    "@cosmjs/ledger-amino": "0.27.1",
     "@cosmjs/proto-signing": "0.27.1",
     "@cosmjs/stargate": "0.27.1"
   },
   "devDependencies": {
+    "@types/ledgerhq__hw-transport": "^4.21.4",
     "@typescript-eslint/eslint-plugin": "^5.11.0",
     "@typescript-eslint/parser": "^5.11.0",
     "eslint": "^7.32.0",
@@ -48,10 +50,10 @@
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.2.0",
-    "prettier": "^2.5.1",
-    "typescript": "^4.5.5",
     "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-simple-import-sort": "^7.0.0"
+    "eslint-plugin-promise": "^5.2.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.5"
   }
 }
