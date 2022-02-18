@@ -9,7 +9,7 @@
   "parserOptions": {
     "ecmaVersion": 2018,
     "project": "./tsconfig.eslint.json",
-    "tsconfigRootDir": "__dirname"
+    "tsconfigRootDir": "./"
   },
   "plugins": ["@typescript-eslint", "prettier", "simple-import-sort", "import"],
   "extends": [
