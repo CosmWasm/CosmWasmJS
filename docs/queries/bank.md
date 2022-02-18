@@ -14,14 +14,19 @@
 
 >**.bank.balance**
 >*Params: (address: string, denom: string)*
+>
 >**.bank.allBalances**
 >*Params:  (address: string)*
+>
 >**.bank.totalSupply**
 >*Params: none* 
+>
 >**.bank.supplyOf**
 >*Params:  (denom: string)*
+>
 >**.bank.denomMetadata**
 >*Params:  (denom: string)*
+>
 >**.bank.denomsMetadata**
 >*Params:  none*
 

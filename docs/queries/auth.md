@@ -13,6 +13,7 @@
 ## Available query methods
 
 >**.auth.account**
+>
 >*Params: (address: string)*
 
 🔗 [Back to query overview](/docs/queries/overview.md)
