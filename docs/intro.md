@@ -1,3 +1,5 @@
+![Logo](/docs/logo.png)
+
 # Introduction
 
 ## What is CosmJS?
