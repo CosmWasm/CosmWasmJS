@@ -8,7 +8,7 @@ CosmJS is the Swiss Army knife to power JavaScript based client solutions rangin
 ## Why CosmWasmJS?
 Because CosmJS tries to cover all client solutions for the Cosmos ecosystem, it can quickly become difficult for new developers to understand how to get started.
 
-CosmWasmJS was created exclusively for dApp developers and combines the necessary features from CosmJS with powerful helper functions to support especially new devs.
+CosmWasmJS was created exclusively for CosmWasm dApp developers and combines the necessary features from CosmJS with powerful helper functions to support especially new devs. Particularly custom Cosmos SDK modules are not supported.
 
 ## Links
 
