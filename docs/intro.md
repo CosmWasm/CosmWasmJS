@@ -10,32 +10,5 @@ Because CosmJS tries to cover all client solutions for the Cosmos ecosystem, it 
 
 CosmWasmJS was created exclusively for dApp developers and combines the necessary features from CosmJS with powerful helper functions to support especially new devs.
 
-# Get Started
+## 🚀 [Get started](/docs/get-started.md)
 
-## Installation
-
-**Yarn**
-`yarn add cosmwasm`
-
-**NPM**
-`npm i cosmwasm`
-
-So your `package.json` should look like:
-
-```json
-{
-  "name": "cosmwasm",
-  "version": "1.0.0",
-  "description": "Your Project",
-  "dependencies": {
-    "cosmwasm": "latest",
-    ...
-  },
-  ...
-}
-
-```
-## More Information
-
-- 🔗 [Clients](/docs/clients.md)
-- 🔗 [Examples](/docs/examples/overview.md)
