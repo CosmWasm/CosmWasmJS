@@ -1,7 +1,7 @@
 # CosmWasmClient
 
 ## About
-The class "CosmWasmClient" is exported from the CosmJS package "@cosmjs/cosmwasm-stargate" and extends the class "StargateClient".  It already comes with a handful of methods that can be used to execute frequently used queries.
+The class `CosmWasmClient` is exported from the CosmJS package `@cosmjs/cosmwasm-stargate` (🔗 [Link](https://github.com/cosmos/cosmjs/tree/main/packages/cosmwasm-stargate)).  It already comes with a handful of methods that can be used to execute frequently used queries.
 
 To execute extended queries, please refer to the 🔗 [Query documentation](/docs/queries/overview.md).
 
