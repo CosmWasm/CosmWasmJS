@@ -7,7 +7,7 @@ import {
   SigningCosmWasmClient,
   setupStakingExtension,
   QueryClient,
-} from "@cosmwasm";
+} from "cosmwasm";
 
 // Get all delegations of a delegator
 const getAllDelegations = async (delegator, rpcUrl) => {
