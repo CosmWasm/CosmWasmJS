@@ -1,11 +1,18 @@
+---
+title: CosmWasmClient
+parent: Child of Test
+grand_parent: Test
+nav_order: 3
+---
+
 # CosmWasmClient
 
 ## About
 The class `CosmWasmClient` is exported from the CosmJS package `@cosmjs/cosmwasm-stargate` (🔗 [Link](https://github.com/cosmos/cosmjs/tree/main/packages/cosmwasm-stargate)).  It already comes with a handful of methods that can be used to execute frequently used queries.
 
-It is used only to execute queries. **NOT** to work with signed transactions. If you are looking for the documentation for this, please see the 🔗 [CosmWasmSigningClient documentation](/docs/clients/CosmWasmSigningClient.md).
+It is used only to execute queries. **NOT** to work with signed transactions. If you are looking for the documentation for this, please see the 🔗 [CosmWasmSigningClient documentation](CosmWasmSigningClient.md).
 
-To execute extended queries, please refer to the 🔗 [Query documentation](/docs/queries/overview.md).
+To execute extended queries, please refer to the 🔗 [Query documentation](../queries/index.md).
 
 ## Usage
 

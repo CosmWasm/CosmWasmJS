@@ -1,3 +1,8 @@
+---
+title: Distribution Queries
+parent: Queries
+nav_order: 3
+---
 # Distribution queries
 
 ## Create a queryClient
@@ -39,4 +44,4 @@
 >**.distribution.validatorSlashes** 
 >*Params:  (validatorAddress: string, startingHeight: number,endingHeight: number, paginationKey?:Uint8Array)*
 
-🔗 [Back to query overview](/docs/queries/overview.md)
+🔗 [Back to query overview](index.md)

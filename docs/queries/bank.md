@@ -1,3 +1,8 @@
+---
+title: Bank Queries
+parent: Queries
+nav_order: 2
+---
 # Bank queries
 
 ## Create a queryClient
@@ -30,4 +35,4 @@
 >**.bank.denomsMetadata**
 >*Params:  none*
 
-🔗 [Back to query overview](/docs/queries/overview.md)
+🔗 [Back to query overview](index.md)

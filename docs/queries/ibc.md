@@ -1,4 +1,9 @@
-# Auth queries
+---
+title: Ibc Queries
+parent: Queries
+nav_order: 5
+---
+# IBC queries
 
 ## Create a queryClient
 
@@ -130,4 +135,4 @@
 >**.ibc.transfer.params**
 >*Params: none*
 
-🔗 [Back to query overview](/docs/queries/overview.md)
+🔗 [Back to query overview](index.md)

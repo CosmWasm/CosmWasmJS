@@ -1,4 +1,4 @@
-![Logo](/docs/logo.png)
+![Logo](logo.png)
 
 # Introduction
 
@@ -12,5 +12,5 @@ Because CosmJS tries to cover all client solutions for the Cosmos ecosystem, it 
 
 CosmWasmJS was created exclusively for dApp developers and combines the necessary features from CosmJS with powerful helper functions to support especially new devs.
 
-## 🚀 [Get started](/docs/get-started.md)
+## 🚀 [Get started](get-started.md)
 

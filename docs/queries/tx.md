@@ -1,4 +1,9 @@
-# Auth queries
+---
+title: Transaction Queries
+parent: Queries
+nav_order: 8
+---
+# Transaction queries
 
 ## Create a queryClient
 
@@ -15,4 +20,4 @@
 >**.tx.getTx**
 >*Params: (txId: string)*
 
-🔗 [Back to query overview](/docs/queries/overview.md)
+🔗 [Back to query overview](index.md)

@@ -1,3 +1,9 @@
+---
+title: Queries
+parent: CosmWasmClient
+nav_order: 1
+---
+
 # Queries
 
 ## Example
@@ -30,18 +36,18 @@ console.log(delegations);
 Depending on what query is needed, queries are divided into different
 extensions:
 
-- 🔗 [AuthExtension](/docs/queries/auth.md) Information about an account
-- 🔗 [BankExtension](/docs/queries/bank.md) Information about account balances,
+- 🔗 [AuthExtension](auth.md) Information about an account
+- 🔗 [BankExtension](bank.md) Information about account balances,
   denoms and supply
-- 🔗 [DistributionExtension](/docs/queries/distribution.md) Information about
+- 🔗 [DistributionExtension](distribution.md) Information about
   community pools, delagations/delegators and validators
-- 🔗 [GovExtension](/docs/queries/gov.md) Information about proposals, deposits
+- 🔗 [GovExtension](gov.md) Information about proposals, deposits
   and votes
-- 🔗 [IbcExtension](/docs/queries/ibc.md) Information about IBC data
-- 🔗 [MintExtension](/docs/queries/mint.md) Information about inflation and
+- 🔗 [IbcExtension](ibc.md) Information about IBC data
+- 🔗 [MintExtension](mint.md) Information about inflation and
   provisions
-- 🔗 [StakingExtension](/docs/queries/staking.md) All information about staking
+- 🔗 [StakingExtension](staking.md) All information about staking
   related stuff
-- 🔗 [TxExtension](/docs/queries/tx.md) Information about transactions
+- 🔗 [TxExtension](tx.md) Information about transactions
 
-🔗 [Back to clients overview](/docs/clients.md)
+🔗 [Back to clients overview](clients.md)

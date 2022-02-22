@@ -1,3 +1,8 @@
+---
+title: Staking Queries
+parent: Queries
+nav_order: 7
+---
 # Staking queries
 
 ## Create a queryClient
@@ -55,4 +60,4 @@
 >**.staking.validatorUnbondingDelegations**
 >*Params: (validatorAddress: string,paginationKey?: Uint8Array)*
 
-🔗 [Back to query overview](/docs/queries/overview.md)
+🔗 [Back to query overview](index.md)

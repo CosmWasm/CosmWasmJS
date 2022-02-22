@@ -1,9 +1,16 @@
+---
+title: CosmWasmSigningClient
+parent: Child of Test
+grand_parent: Test
+nav_order: 3
+---
+
 # CosmWasmSigningClient
 
 ## About
 The class `CosmWasmSigningClient` is exported from the CosmJS package `@cosmjs/cosmwasm-stargate` (🔗 [Link](https://github.com/cosmos/cosmjs/tree/main/packages/cosmwasm-stargate)). 
 
-`CosmWasmSigningClient` extends `CosmWasmClient`, so all methods described in the 🔗 [CosmWasmClient documentation ](/docs/clients/CosmWasmClient.md) work here too.
+`CosmWasmSigningClient` extends `CosmWasmClient`, so all methods described in the 🔗 [CosmWasmClient documentation ](CosmWasmClient.md) work here too.
 
 This client is used to work with signed transactions. To instantiate it, a wallet must be connected. For this, please refer to the setup documentation.
 

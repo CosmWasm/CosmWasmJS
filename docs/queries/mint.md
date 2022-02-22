@@ -1,3 +1,8 @@
+---
+title: Mint Queries
+parent: Queries
+nav_order: 6
+---
 # Mint queries
 
 ## Create a queryClient
@@ -21,4 +26,4 @@
 >**.mint.annualProvisions**
 >*Params: none*
 
-🔗 [Back to query overview](/docs/queries/overview.md)
+🔗 [Back to query overview](index.md)

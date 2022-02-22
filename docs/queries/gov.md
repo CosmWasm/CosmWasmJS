@@ -1,3 +1,8 @@
+---
+title: Gov Queries
+parent: Queries
+nav_order: 4
+---
 # Gov queries
 
 ## Create a queryClient
@@ -33,4 +38,4 @@
 >**.gov.vote**
 >*Params: (proposalId: GovProposalId, voterAddress: string)*
 
-🔗 [Back to query overview](/docs/queries/overview.md)
+🔗 [Back to query overview](index.md)

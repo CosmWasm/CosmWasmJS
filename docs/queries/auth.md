@@ -1,3 +1,8 @@
+---
+title: Auth Queries
+parent: Queries
+nav_order: 1
+---
 # Auth queries
 
 ## Create a queryClient
@@ -16,4 +21,4 @@
 >
 >*Params: (address: string)*
 
-🔗 [Back to query overview](/docs/queries/overview.md)
+🔗 [Back to query overview](index.md)
