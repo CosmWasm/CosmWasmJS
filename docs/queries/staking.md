@@ -1,6 +1,7 @@
 ---
 title: Staking Queries
 parent: Queries
+grand_parent: CosmWasmClient
 nav_order: 7
 ---
 # Staking queries

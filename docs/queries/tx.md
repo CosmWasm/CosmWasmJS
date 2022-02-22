@@ -1,6 +1,7 @@
 ---
 title: Transaction Queries
 parent: Queries
+grand_parent: CosmWasmClient
 nav_order: 8
 ---
 # Transaction queries

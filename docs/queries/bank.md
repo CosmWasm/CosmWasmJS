@@ -1,6 +1,7 @@
 ---
 title: Bank Queries
 parent: Queries
+grand_parent: CosmWasmClient
 nav_order: 2
 ---
 # Bank queries

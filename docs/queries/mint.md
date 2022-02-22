@@ -1,6 +1,7 @@
 ---
 title: Mint Queries
 parent: Queries
+grand_parent: CosmWasmClient
 nav_order: 6
 ---
 # Mint queries

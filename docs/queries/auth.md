@@ -1,6 +1,7 @@
 ---
 title: Auth Queries
 parent: Queries
+grand_parent: CosmWasmClient
 nav_order: 1
 ---
 # Auth queries

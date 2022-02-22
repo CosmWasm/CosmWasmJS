@@ -1,6 +1,7 @@
 ---
 title: Distribution Queries
 parent: Queries
+grand_parent: CosmWasmClient
 nav_order: 3
 ---
 # Distribution queries

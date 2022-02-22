@@ -1,6 +1,7 @@
 ---
 title: Ibc Queries
 parent: Queries
+grand_parent: CosmWasmClient
 nav_order: 5
 ---
 # IBC queries

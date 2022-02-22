@@ -1,6 +1,7 @@
 ---
 title: Gov Queries
 parent: Queries
+grand_parent: CosmWasmClient
 nav_order: 4
 ---
 # Gov queries
