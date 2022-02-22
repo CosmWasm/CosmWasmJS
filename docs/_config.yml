@@ -1,1 +1,4 @@
-remote_theme: aksakalli/jekyll-doc-theme@gh-pages
+title: "CosmWasmJS Docs"
+remote_theme: pmarsceill/just-the-docs
+color_scheme: "dark"
+search_enabled: false
