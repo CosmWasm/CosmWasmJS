@@ -1,8 +1,6 @@
 ---
 title: CosmWasmSigningClient
-parent: Child of Test
-grand_parent: Test
-nav_order: 3
+nav_order: 4
 ---
 
 # CosmWasmSigningClient

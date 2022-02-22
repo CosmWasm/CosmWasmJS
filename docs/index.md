@@ -1,3 +1,8 @@
+---
+title: Intro
+nav_order: 1
+---
+
 ![Logo](logo.png)
 
 # Introduction
