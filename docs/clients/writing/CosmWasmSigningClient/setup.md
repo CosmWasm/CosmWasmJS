@@ -5,7 +5,7 @@ parent: CosmWasmSigningClient
 grand_parent: Writing
 ---
 
-# Setup of CosmWasmCLient
+# Setup of CosmWasmSigningClient
 
 ## Setup functions
 
