@@ -19,6 +19,8 @@ const client = QueryClient.withExtensions(tmClient, setupAuthExtension);
 
 ## Available query methods
 
-> **.tx.getTx** >_Params: (txId: string)_
+| Method    | Description | Params          |
+| :-------- | :---------- | :-------------- |
+| .tx.getTx |             |  *txId: string* |
 
 🔗 [Back to query overview](index.md)

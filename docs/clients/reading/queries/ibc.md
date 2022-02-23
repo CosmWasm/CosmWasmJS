@@ -4,136 +4,77 @@ parent: Advanced Queries
 grand_parent: Reading
 nav_order: 5
 ---
+
 # IBC queries
 
 ## Create a queryClient
 
 ```ts
-  // Instantiate tmClient
-  const tmClient = await Tendermint34Client.connect(rpcUrl);
+// Instantiate tmClient
+const tmClient = await Tendermint34Client.connect(rpcUrl);
 
-  // Create client with authExtension
-  const client = QueryClient.withExtensions(tmClient, setupAuthExtension);
+// Create client with authExtension
+const client = QueryClient.withExtensions(tmClient, setupAuthExtension);
 ```
 
 ## Available query methods
 
-###Channel Queries
->**.ibc.channel.channel**
->*Params: (portId: string, channelId: string)*
->
->**.ibc.channel.channels**
->*Params: (paginationKey?: Uint8Array)*
->
->**.ibc.channel.allChannels**: 
->*Params: none*
->
->**.ibc.channel.connectionChannels**
->*Params: (connection: string, paginationKey?: Uint8Array)*
->
->**.ibc.channel.allConnectionChannels**
->*Params: (connection: string)*
->
->**.ibc.channel.clientState**
->*Params: (portId: string, channelId: string)*
->
->**.ibc.channel.consensusState**
->*Params: (portId: string,channelId: string,revisionNumber: number,revisionHeight: number)*
->
->**.ibc.channel.packetCommitment**
->*Params: (portId: string, channelId: string, sequence: Long)*
->
->**.ibc.channel.packetCommitments**
->*Params: ( portId: string,channelId: string,paginationKey?: Uint8Array)*
->
->**.ibc.channel.allPacketCommitments**
->*Params: ( portId: string, channelId: string)*
->
->**.ibc.channel.packetReceipt**
->*Params: ( portId: string, channelId: string, sequence: number)*
->
->**.ibc.channel.packetAcknowledgement**
->*Params: ( portId: string,channelId: string, sequence: number)*
->
->**.ibc.channel.packetAcknowledgements**
->*Params: ( portId: string,channelId: string,paginationKey?: Uint8Array)*
->
->**.ibc.channel.allPacketAcknowledgements**
->*Params: ( portId: string, channelId: string)*
->
->**.ibc.channel.unreceivedPackets**
->*Params: ( portId: string,channelId: string, packetCommitmentSequences:  number[])*
->
->**.ibc.channel.unreceivedAcks**
->*Params: ( portId: string,channelId: string,packetAckSequences:  number[])*
->
->**.ibc.channel.nextSequenceReceive**
->*Params: ( portId: string,channelId: string)*
+### Channel Queries
+
+| Method                                 | Description | Params                                                                           |
+| :------------------------------------- | :---------- | :------------------------------------------------------------------------------- |
+| .ibc.channel.channel                   |             | _portId: string, channelId: string_                                              |
+| .ibc.channel.channels                  |             | _paginationKey?: Uint8Array_                                                     |
+| .ibc.channel.allChannels               |             | _none_                                                                           |
+| .ibc.channel.connectionChannels        |             | _connection: string, paginationKey?: Uint8Array_                                 |
+| .ibc.channel.allConnectionChannels     |             | _connection: string_                                                             |
+| .ibc.channel.clientState               |             | _portId: string, channelId: string_                                              |
+| .ibc.channel.consensusState            |             | _portId: string,channelId: string,revisionNumber: number,revisionHeight: number_ |
+| .ibc.channel.packetCommitment          |             | _portId: string, channelId: string, sequence: Long_                              |
+| .ibc.channel.packetCommitments         |             | _portId: string,channelId: string,paginationKey?: Uint8Array_                    |
+| .ibc.channel.allPacketCommitments      |             | _portId: string, channelId: string_                                              |
+| .ibc.channel.packetReceipt             |             | _portId: string, channelId: string, sequence: number_                            |
+| .ibc.channel.packetAcknowledgement     |             | _portId: string,channelId: string, sequence: number_                             |
+| .ibc.channel.packetAcknowledgements    |             | _portId: string,channelId: string,paginationKey?: Uint8Array_                    |
+| .ibc.channel.allPacketAcknowledgements |             | _portId: string, channelId: string_                                              |
+| .ibc.channel.unreceivedPackets         |             | _portId: string,channelId: string, packetCommitmentSequences: number[]_          |
+| .ibc.channel.unreceivedAcks            |             | _portId: string,channelId: string,packetAckSequences: number[]_                  |
+| .ibc.channel.nextSequenceReceive       |             | _portId: string,channelId: string_                                               |
 
 ### Client Queries
->**.ibc.client.state**
->*Params: (clientId: string)*
->
->**.ibc.client.states**
->*Params: (paginationKey?: Uint8Array)*
->
->**.ibc.client.allStates**
->*Params: none*
->
->**.ibc.client.consensusState**
->*Params: (clientId: string, height?: number)*
->
->**.ibc.client.consensusStates**
->*Params: (clientId: string,paginationKey?: Uint8Array)*
->
->**.ibc.client.allConsensusStates**
->*Params: (clientId: string)*
->
->**.ibc.client.params**
->*Params: ()*
->
->**.ibc.client.stateTm**
->*Params: (clientId: string)*
->
->**.ibc.client.statesTm**
->*Params: (paginationKey?: Uint8Array)*
->
->**.ibc.client.allStatesTm**
->*Params: ()*
->
->**.ibc.client.consensusStateTm**
->*Params: (clientId: string, height?: Height)*
+
+| Method                         | Description | Params                                        |
+| :----------------------------- | :---------- | :-------------------------------------------- |
+| .ibc.client.state              |             | _clientId: string_                            |
+| .ibc.client.states             |             | _paginationKey?: Uint8Array_                  |
+| .ibc.client.allStates          |             | _none_                                        |
+| .ibc.client.consensusState     |             | _clientId: string, height?: number_           |
+| .ibc.client.consensusStates    |             | _clientId: string,paginationKey?: Uint8Array_ |
+| .ibc.client.allConsensusStates |             | _clientId: string_                            |
+| .ibc.client.params             |             | _none_                                        |
+| .ibc.client.stateTm            |             | _clientId: string_                            |
+| .ibc.client.statesTm           |             | _paginationKey?: Uint8Array_                  |
+| .ibc.client.allStatesTm        |             | _none_                                        |
+| .ibc.client.consensusStateTm   |             | _clientId: string, height?: Height_           |
 
 ### Connection Queries
->**.ibc.connection.connection**
->*Params: (connectionId: string)*
->
->**.ibc.connection.connections**
->*Params: (paginationKey?: Uint8Array)*
->
->**.ibc.connection.allConnections**
->*Params: none*
->
->**.ibc.connection.clientConnections**
->*Params: (clientId: string)*
->
->**.ibc.connection.clientState**
->*Params: (connectionId: string)*
->
->**.ibc.connection.consensusState**
->*Params: (connectionId: string,revisionNumber: number,revisionHeight: number)*
+
+| Method                            | Description | Params                                                               |
+| :-------------------------------- | :---------- | :------------------------------------------------------------------- |
+| .ibc.connection.connection        |             | _connectionId: string_                                               |
+| .ibc.connection.connections       |             | _paginationKey?: Uint8Array_                                         |
+| .ibc.connection.allConnections    |             | _none_                                                               |
+| .ibc.connection.clientConnections |             | _clientId: string_                                                   |
+| .ibc.connection.clientState       |             | _connectionId: string_                                               |
+| .ibc.connection.consensusState    |             | _connectionId: string,revisionNumber: number,revisionHeight: number_ |
 
 ### Transfer Queries
->**.ibc.transfer.denomTrace** 
->*Params: (hash: string)*
->
->**.ibc.transfer.denomTraces** 
->*Params: (paginationKey?: Uint8Array)*
->
->**.ibc.transfer.allDenomTraces**
->*Params: none*
->
->**.ibc.transfer.params**
->*Params: none*
+
+| Method                       | Description | Params                       |
+| :--------------------------- | :---------- | :--------------------------- |
+| .ibc.transfer.denomTrace     |             | _hash: string_               |
+| .ibc.transfer.denomTraces    |             | _paginationKey?: Uint8Array_ |
+| .ibc.transfer.allDenomTraces |             | _none_                       |
+| .ibc.transfer.params         |             | _none_                       |
 
 🔗 [Back to query overview](index.md)

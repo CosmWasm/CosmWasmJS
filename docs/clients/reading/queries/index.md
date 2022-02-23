@@ -7,7 +7,9 @@ has_children: true
 
 # Queries
 
-If the methods of the CosmWasmClient are no longer sufficient, you can also instantiate a QueryClient yourself. With the help of various extensions, different types of queries can be executed.
+If the methods of the CosmWasmClient are no longer sufficient, you can also
+instantiate a QueryClient yourself. With the help of various extensions,
+different types of queries can be executed.
 
 ## Example
 

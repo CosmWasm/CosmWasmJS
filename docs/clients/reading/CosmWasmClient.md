@@ -7,11 +7,19 @@ parent: Reading
 # CosmWasmClient
 
 ## About
-The class `CosmWasmClient` is exported from the CosmJS package `@cosmjs/cosmwasm-stargate` (🔗 [Link](https://github.com/cosmos/cosmjs/tree/main/packages/cosmwasm-stargate)).  It already comes with a handful of methods that can be used to execute frequently used queries.
 
-It is used only to execute queries. **NOT** to work with signed transactions. If you are looking for the documentation for this, please see the 🔗 [CosmWasmSigningClient documentation](../writing/CosmWasmSigningClient.md).
+The class `CosmWasmClient` is exported from the CosmJS package
+`@cosmjs/cosmwasm-stargate` (🔗
+[Link](https://github.com/cosmos/cosmjs/tree/main/packages/cosmwasm-stargate)).
+It already comes with a handful of methods that can be used to execute
+frequently used queries.
 
-To execute extended queries, please refer to the 🔗 [Query documentation](queries/index.md).
+It is used only to execute queries. **NOT** to work with signed transactions. If
+you are looking for the documentation for this, please see the 🔗
+[CosmWasmSigningClient documentation](../writing/CosmWasmSigningClient.md).
+
+To execute extended queries, please refer to the 🔗
+[Query documentation](queries/index.md).
 
 ## Usage
 
@@ -32,83 +40,37 @@ main();
 # Available Methods
 
 ## General
->**.connect()**
->
-> Returns the client.
->
->*Params: (tmClient: Tendermint34Client)*
 
->**.getChainId()**
->
-> Get current chain's ID.
->
->*Params: none*
-
->**.getHeight()**
->
-> Get current height of the chain.
->
->*Params: none*
-
->**.getAccount()**
->
-> Get more information about an account.
->
->*Params: (searchAddress: string)*
-
->**.getSequence()**
->
->*Params: (address: string)*
-
->**.getBlock()**
->
->*Params: (height?: number)*
-
->**.getBalance()**
->
->*Params: (address: string, searchDenom: string)*
-
+| Method         | Description                            | Params                                 |
+| :------------- | :------------------------------------- | :------------------------------------- |
+| .connect()     | Returns the client.                    | _tmClient: Tendermint34Client_         |
+| .getChainId()  | Get current chain's ID.                | _none_                                 |
+| .getHeight()   | Get current height of the chain.       | _none_                                 |
+| .getAccount()  | Get more information about an account. | _searchAddress: string_                |
+| .getSequence() |                                        | _address: string_                      |
+| .getBlock()    |                                        | _height?: number_                      |
+| .getBalance()  |                                        | _address: string, searchDenom: string_ |
 
 ## Transactions
 
->**.getTx()**
->
->*Params: (id: string)*
-
->**.searchTx()**
->
->*Params: (query: SearchTxQuery, filter: SearchTxFilter = {})*
-
->**.txsQuery()**
->
->*Params: (query: string)*
+| Method      | Description | Params                                              |
+| :---------- | :---------- | :-------------------------------------------------- |
+| .getTx()    |             | _id: string_                                        |
+| .searchTx() |             | _query: SearchTxQuery, filter: SearchTxFilter = {}_ |
+| .txsQuery() |             | _query: string_                                     |
 
 ## Codes
 
->**.getCodes()**
->
->*Params: (none)*
-
->**.getCodeDetails()**
->
->*Params: (codeId: number)*
+| Method            | Description | Params           |
+| :---------------- | :---------- | :--------------- |
+| .getCodes()       |             | _none_           |
+| .getCodeDetails() |             | _codeId: number_ |
 
 ## Smart Contracts
 
->**.getContracts()**
->
->*Params: (cideId: number)*
-
->**.getContract()**
->
->*Params: (address: string)*
-
->**.queryContractRaw()**
->
->*Params: (address: string, key: Uint8Array)*
-
->**.queryContractSmart()**
->
->*Params: (address: string, queryMsg: Record<string, unknown>)*
-
-
+| Method                | Description | Params                                               |
+| :-------------------- | :---------- | :--------------------------------------------------- |
+| .getContracts()       |             | _cideId: number_                                     |
+| .getContract()        |             | _address: string_                                    |
+| .queryContractRaw()   |             | _address: string, key: Uint8Array_                   |
+| .queryContractSmart() |             | _address: string, queryMsg: Record<string, unknown>_ |
