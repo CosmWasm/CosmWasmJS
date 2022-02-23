@@ -17,5 +17,7 @@ Because CosmJS tries to cover all client solutions for the Cosmos ecosystem, it 
 
 CosmWasmJS was created exclusively for dApp developers and combines the necessary features from CosmJS with powerful helper functions to support especially new devs.
 
-## 🚀 [Get started](get-started.md)
+[🚀 Get started](get-started.md){: .btn .btn-purple }
 
+This documentation is maintained by [msteiner96](https://github.com/msteiner96)([Confio](https://github.com/confio/))
+{: .fs-2 }

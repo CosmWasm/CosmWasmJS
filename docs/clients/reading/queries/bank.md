@@ -1,12 +1,12 @@
 ---
 title: Bank Queries
-parent: Queries
-grand_parent: CosmWasmClient
+parent: Advanced Queries
+grand_parent: Reading
 nav_order: 2
 ---
 # Bank queries
 
-## Create a queryClient
+ ## Create a queryClient
 
 ```ts
   // Instantiate tmClient

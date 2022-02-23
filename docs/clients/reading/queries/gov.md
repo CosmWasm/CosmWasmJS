@@ -1,7 +1,7 @@
 ---
 title: Gov Queries
-parent: Queries
-grand_parent: CosmWasmClient
+parent: Advanced Queries
+grand_parent: Reading
 nav_order: 4
 ---
 # Gov queries

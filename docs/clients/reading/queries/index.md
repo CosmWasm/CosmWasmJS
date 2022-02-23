@@ -1,7 +1,7 @@
 ---
-title: Queries
-parent: CosmWasmClient
-nav_order: 1
+title: Advanced Queries
+parent: Reading
+nav_order: 2
 has_children: true
 ---
 
@@ -38,17 +38,14 @@ Depending on what query is needed, queries are divided into different
 extensions:
 
 - 🔗 [AuthExtension](auth.md) Information about an account
-- 🔗 [BankExtension](bank.md) Information about account balances,
-  denoms and supply
-- 🔗 [DistributionExtension](distribution.md) Information about
-  community pools, delagations/delegators and validators
-- 🔗 [GovExtension](gov.md) Information about proposals, deposits
-  and votes
+- 🔗 [BankExtension](bank.md) Information about account balances, denoms and
+  supply
+- 🔗 [DistributionExtension](distribution.md) Information about community pools,
+  delagations/delegators and validators
+- 🔗 [GovExtension](gov.md) Information about proposals, deposits and votes
 - 🔗 [IbcExtension](ibc.md) Information about IBC data
-- 🔗 [MintExtension](mint.md) Information about inflation and
-  provisions
-- 🔗 [StakingExtension](staking.md) All information about staking
-  related stuff
+- 🔗 [MintExtension](mint.md) Information about inflation and provisions
+- 🔗 [StakingExtension](staking.md) All information about staking related stuff
 - 🔗 [TxExtension](tx.md) Information about transactions
 
 🔗 [Back to clients overview](clients.md)

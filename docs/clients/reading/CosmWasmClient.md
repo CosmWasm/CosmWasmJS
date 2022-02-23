@@ -1,7 +1,7 @@
 ---
 title: CosmWasmClient
-has_children: true
-nav_order: 3
+nav_order: 1
+parent: Reading
 ---
 
 # CosmWasmClient
@@ -9,9 +9,9 @@ nav_order: 3
 ## About
 The class `CosmWasmClient` is exported from the CosmJS package `@cosmjs/cosmwasm-stargate` (🔗 [Link](https://github.com/cosmos/cosmjs/tree/main/packages/cosmwasm-stargate)).  It already comes with a handful of methods that can be used to execute frequently used queries.
 
-It is used only to execute queries. **NOT** to work with signed transactions. If you are looking for the documentation for this, please see the 🔗 [CosmWasmSigningClient documentation](CosmWasmSigningClient.md).
+It is used only to execute queries. **NOT** to work with signed transactions. If you are looking for the documentation for this, please see the 🔗 [CosmWasmSigningClient documentation](../writing/CosmWasmSigningClient.md).
 
-To execute extended queries, please refer to the 🔗 [Query documentation](../queries/index.md).
+To execute extended queries, please refer to the 🔗 [Query documentation](queries/index.md).
 
 ## Usage
 
@@ -23,7 +23,7 @@ const rpcEndpoint = "https://rpc.cliffnet.cosmwasm.com:443/";
 
 async function main() {
   const client = await CosmWasmClient.connect(rpcEndpoint);
-  console.log(client);
+  console.log(client);‚
 }
 
 main();

@@ -7,9 +7,11 @@ nav_order: 2
 ## Installation
 
 **Yarn**
+
 `yarn add cosmwasm`
 
 **NPM**
+
 `npm i cosmwasm`
 
 So your `package.json` should look like:
@@ -35,11 +37,7 @@ You don't need to do any configuration to get started. It is only important to u
 
 Basically there are 2 different clients:
 - **CosmWasmClient**
-This client can only read. You do not need to have a wallet to instantiate this one. Only an rpcUrl is needed. For a more detailed description please refer to the 🔗 [CosmWasmClient Docs](clients/CosmWasmClient.md).
+This client can only read. You do not need to have a wallet to instantiate this one. Only an rpcUrl is needed. For a more detailed description please refer to the 🔗 [CosmWasmClient Docs](clients/reading/CosmWasmClient.md).
 
 - **CosmWasmSigningClient**
-This client can also write. In order to instantiate it, a wallet must be specified in addition to the rpcUrl. To facilitate the instantiation, CosmWasmJS already comes with some setup functions. For a more detailed description please refer to the 🔗 [CosmWasmSigningClient Docs](clients/CosmWasmSigningClient.md).
-
-## Further Reading
-- 🔗 [Query documentation](queries/index.md)
-- 🔗 [Examples](examples/index.md)
+This client can also write. In order to instantiate it, a wallet must be specified in addition to the rpcUrl. To facilitate the instantiation, CosmWasmJS already comes with some setup functions. For a more detailed description please refer to the 🔗 [CosmWasmSigningClient Docs](clients/writing/CosmWasmSigningClient.md).

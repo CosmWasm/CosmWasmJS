@@ -2,3 +2,8 @@ title: "CosmWasmJS Docs"
 remote_theme: pmarsceill/just-the-docs
 color_scheme: "light"
 search_enabled: true
+description: "CosmWasJS Docs"
+logo: "/logo.png"
+aux_links:
+  "CosmWasmJS on Github":
+    - "//github.com/CosmWasm/CosmWasmJS"
