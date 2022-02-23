@@ -16,7 +16,7 @@ frequently used queries.
 
 It is used only to execute queries. **NOT** to work with signed transactions. If
 you are looking for the documentation for this, please see the 🔗
-[CosmWasmSigningClient documentation](../writing/CosmWasmSigningClient.md).
+[CosmWasmSigningClient documentation](../writing/CosmWasmSigningClient/index.md).
 
 To execute extended queries, please refer to the 🔗
 [Query documentation](queries/index.md).
