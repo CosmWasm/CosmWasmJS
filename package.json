@@ -8,6 +8,7 @@
     "build": "rm -rf ./build && tsc",
     "lint": "eslint --max-warnings 0 \"./src/**/*.ts\""
   },
+  "bin": "src/cli/bin/cli",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CosmWasm/CosmWasmJS.git"
@@ -39,7 +40,8 @@
     "@cosmjs/faucet-client": "0.27.1",
     "@cosmjs/ledger-amino": "0.27.1",
     "@cosmjs/proto-signing": "0.27.1",
-    "@cosmjs/stargate": "0.27.1"
+    "@cosmjs/stargate": "0.27.1",
+    "@cosmjs/cli": "0.27.1"
   },
   "devDependencies": {
     "@types/ledgerhq__hw-transport": "^4.21.4",

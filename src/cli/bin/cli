@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+const cli = require("@cosmjs/cli/build/cli");
+
+cli.main(process.argv.slice(2));
