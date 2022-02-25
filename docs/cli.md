@@ -1,7 +1,6 @@
 ---
 title: Command Line
 nav_order: 5
-has_children: true
 ---
 
 # Command Line Interface (CLI)
