@@ -1,0 +1,15 @@
+# General
+title: "CosmWasmJS Docs"
+description: "CosmWasJS Docs"
+
+#Theming
+remote_theme: pmarsceill/just-the-docs
+color_scheme: "light"
+search_enabled: true
+logo: "/logo.png"
+
+# External Links
+aux_links:
+  "CosmWasmJS on Github":
+    - "//github.com/CosmWasm/CosmWasmJS"
+aux_links_new_tab: true
