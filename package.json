@@ -1,6 +1,6 @@
 {
   "name": "cosmwasm",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A wrapper package for all relevant cosmjs packages.",
   "main": "build/index.js",
   "scripts": {
