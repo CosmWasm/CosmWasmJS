@@ -33,15 +33,17 @@
   },
   "homepage": "https://github.com/CosmWasm/CosmWasmJS#readme",
   "dependencies": {
-    "@cosmjs/amino": "0.27.1",
-    "@cosmjs/cosmwasm-stargate": "0.27.1",
-    "@cosmjs/crypto": "0.27.1",
-    "@cosmjs/encoding": "0.27.1",
-    "@cosmjs/faucet-client": "0.27.1",
-    "@cosmjs/ledger-amino": "0.27.1",
-    "@cosmjs/proto-signing": "0.27.1",
-    "@cosmjs/stargate": "0.27.1",
-    "@cosmjs/cli": "0.27.1"
+    "@cosmjs/amino": "0.28.0-rc1",
+    "@cosmjs/cosmwasm-stargate": "0.28.0-rc1",
+    "@cosmjs/crypto": "0.28.0-rc1",
+    "@cosmjs/encoding": "0.28.0-rc1",
+    "@cosmjs/faucet-client": "0.28.0-rc1",
+    "@cosmjs/ledger-amino": "0.28.0-rc1",
+    "@cosmjs/proto-signing": "0.28.0-rc1",
+    "@cosmjs/stargate": "0.28.0-rc1",
+    "@cosmjs/cli": "0.28.0-rc1",
+    "@cosmjs/math": "0.28.0-rc1",
+    "@cosmjs/utils": "0.28.0-rc1"
   },
   "devDependencies": {
     "@types/ledgerhq__hw-transport": "^4.21.4",

@@ -1,1 +1,1 @@
-export { HdPath, pathToString } from "@cosmjs/crypto";
+export { Bip39, HdPath, pathToString, Random } from "@cosmjs/crypto";

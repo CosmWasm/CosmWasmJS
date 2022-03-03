@@ -1,13 +1,18 @@
 export {
   ChangeAdminResult,
+  CodeDetails,
+  Contract,
+  ContractCodeHistoryEntry,
   CosmWasmClient,
   ExecuteResult,
   fromBinary,
   InstantiateOptions,
   InstantiateResult,
   MigrateResult,
+  MsgExecuteContractEncodeObject,
   SigningCosmWasmClient,
   SigningCosmWasmClientOptions,
   toBinary,
   UploadResult,
+  WasmExtension,
 } from "@cosmjs/cosmwasm-stargate";

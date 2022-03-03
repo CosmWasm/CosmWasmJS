@@ -4,11 +4,13 @@ export { Block, GasPrice, IndexedTx, QueryClient } from "@cosmjs/stargate";
 export {
   AuthExtension,
   BankExtension,
+  calculateFee,
   createPagination,
   DistributionExtension,
   GovExtension,
   IbcExtension,
   MintExtension,
+  MsgSendEncodeObject,
   setupAuthExtension,
   setupBankExtension,
   setupDistributionExtension,
