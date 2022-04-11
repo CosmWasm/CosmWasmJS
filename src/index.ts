@@ -76,6 +76,7 @@ export {
   fromHex,
   fromRfc3339,
   fromUtf8,
+  normalizeBech32,
   toAscii,
   toBase64,
   toBech32,
