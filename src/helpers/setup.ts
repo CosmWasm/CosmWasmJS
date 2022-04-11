@@ -8,11 +8,11 @@
  *  (c) Node / Local Mnemonic
  *  (d) Node / Ledger
  */
-import { makeCosmoshubPath } from "../amino";
-import { SigningCosmWasmClient } from "../cosmwasm-stargate";
-import { LedgerSigner } from "../ledger-amino";
-import { DirectSecp256k1HdWallet } from "../proto-signing";
-import { GasPrice } from "../stargate";
+import { makeCosmoshubPath } from "@cosmjs/amino";
+import { SigningCosmWasmClient } from "@cosmjs/cosmwasm-stargate";
+import { LedgerSigner } from "@cosmjs/ledger-amino";
+import { DirectSecp256k1HdWallet } from "@cosmjs/proto-signing";
+import { GasPrice } from "@cosmjs/stargate";
 
 /**
  * All setup functions are using the same config pattern
