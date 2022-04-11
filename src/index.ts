@@ -2,6 +2,9 @@
  * Exporting all the defined CosmJS symbols
  */
 
+// CosmWasmJS Helpers
+export { setupNodeLedger, setupNodeLocal, setupWebKeplr, setupWebLedger } from "./helpers/setup";
+
 // @cosmjs/amino
 export {
   AccountData,
@@ -42,9 +45,6 @@ export {
   StdSignDoc,
   StdTx,
 } from "@cosmjs/amino";
-
-// CosmWasmJS Helpers
-export { setupNodeLedger, setupNodeLocal, setupWebKeplr, setupWebLedger } from "./helpers/setup";
 
 // @cosmjs/cosmwasm-stargate
 export {
