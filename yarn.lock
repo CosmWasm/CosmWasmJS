@@ -187,15 +187,15 @@
     xstream "^11.14.0"
 
 "@cosmjs/ledger-amino@^0.28.3":
-  version "0.28.3"
-  resolved "https://registry.yarnpkg.com/@cosmjs/ledger-amino/-/ledger-amino-0.28.3.tgz#ad0a4dc0ea5937c3fb5e32edf9376342efad99b0"
-  integrity sha512-J1gBg8PEAJTsExoHpWQ3YsB3j5v+yJUesM+jNsoRHPPxfgJfastNzvWW1E/s+7NlrJWtVajDQwFMurjj0NkS/Q==
+  version "0.28.4"
+  resolved "https://registry.yarnpkg.com/@cosmjs/ledger-amino/-/ledger-amino-0.28.4.tgz#1762cdf2572731d529aad7ac20472b7ddbf0d93a"
+  integrity sha512-SdKGk3jElpF5lbBJ8f/xvgk1GkItezpaZosAeOIgyzeGfDJL/nPFl0K0vs9L2PLCzLPEScA+9EocMC7F90UA4w==
   dependencies:
-    "@cosmjs/amino" "0.28.3"
-    "@cosmjs/crypto" "0.28.3"
-    "@cosmjs/encoding" "0.28.3"
-    "@cosmjs/math" "0.28.3"
-    "@cosmjs/utils" "0.28.3"
+    "@cosmjs/amino" "0.28.4"
+    "@cosmjs/crypto" "0.28.4"
+    "@cosmjs/encoding" "0.28.4"
+    "@cosmjs/math" "0.28.4"
+    "@cosmjs/utils" "0.28.4"
     ledger-cosmos-js "^2.1.8"
     semver "^7.3.2"
 
