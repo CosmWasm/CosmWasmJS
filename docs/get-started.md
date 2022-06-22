@@ -31,7 +31,7 @@ So your `package.json` should look like:
 
 **CosmWasmJS in the browser**
 
-You can access all the objects of the cosmwasm from the global `cosmwasm` object if you load CosmWasmJS with a `<script>` tag.
+You can access all the objects of the cosmwasm from the global `CosmWasmJS` object if you load CosmWasmJS with a `<script>` tag.
 
 Include the following in your browser:
 ```html
