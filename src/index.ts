@@ -3,7 +3,7 @@
  */
 
 // CosmWasmJS Helpers
-export { setupNodeLedger, setupNodeLocal, setupWebKeplr, setupWebLedger } from "./helpers/setup";
+export { setupNodeLedger, setupNodeLocal, setupWebKeplr, setupWebLedger, setupCosmostation } from "./helpers/setup";
 
 // @cosmjs/amino
 export {

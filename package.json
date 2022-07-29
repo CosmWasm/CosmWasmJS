@@ -44,13 +44,15 @@
     "@cosmjs/math": "^0.28.9",
     "@cosmjs/proto-signing": "^0.28.9",
     "@cosmjs/stargate": "^0.28.9",
-    "@cosmjs/utils": "^0.28.9"
+    "@cosmjs/utils": "^0.28.9",
+    "@cosmostation/cosmos-client": "^0.0.1"
   },
   "devDependencies": {
     "@types/ledgerhq__hw-transport": "^4.21.4",
     "@typescript-eslint/eslint-plugin": "^5.11.0",
     "@typescript-eslint/parser": "^5.11.0",
     "buffer": "^6.0.3",
+    "bufferutil": "^4.0.6",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-standard": "^16.0.3",
@@ -68,7 +70,6 @@
     "typescript": "^4.5.5",
     "utf-8-validate": "^5.0.8",
     "webpack": "^5.70.0",
-    "webpack-cli": "^4.9.2",
-    "bufferutil": "^4.0.6"
+    "webpack-cli": "^4.9.2"
   }
 }
