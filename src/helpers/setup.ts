@@ -1,8 +1,3 @@
-import { DirectSecp256k1HdWallet } from "@cosmjs/proto-signing";
-import { GasPrice } from "@cosmjs/stargate";
-import { LedgerSigner } from "@cosmjs/ledger-amino";
-import { SigningCosmWasmClient } from "@cosmjs/cosmwasm-stargate";
-import { getOfflineSigner } from "@cosmostation/cosmos-client";
 /**
  * Setup helper functions
  *
@@ -15,6 +10,11 @@ import { getOfflineSigner } from "@cosmostation/cosmos-client";
  *  (e) Web / Cosmostation
  */
 import { makeCosmoshubPath } from "@cosmjs/amino";
+import { SigningCosmWasmClient } from "@cosmjs/cosmwasm-stargate";
+import { LedgerSigner } from "@cosmjs/ledger-amino";
+import { DirectSecp256k1HdWallet } from "@cosmjs/proto-signing";
+import { GasPrice } from "@cosmjs/stargate";
+import { getOfflineSigner } from "@cosmostation/cosmos-client";
 
 /**
  * All setup functions are using the same config pattern
