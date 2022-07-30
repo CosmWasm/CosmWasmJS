@@ -7,12 +7,14 @@
  *  (b) Web / Ledger
  *  (c) Node / Local Mnemonic
  *  (d) Node / Ledger
+ *  (e) Web / Cosmostation
  */
 import { makeCosmoshubPath } from "@cosmjs/amino";
 import { SigningCosmWasmClient } from "@cosmjs/cosmwasm-stargate";
 import { LedgerSigner } from "@cosmjs/ledger-amino";
 import { DirectSecp256k1HdWallet } from "@cosmjs/proto-signing";
 import { GasPrice } from "@cosmjs/stargate";
+import { getOfflineSigner } from "@cosmostation/cosmos-client";
 
 /**
  * All setup functions are using the same config pattern
@@ -50,6 +52,29 @@ export async function setupWebKeplr(config: Config): Promise<SigningCosmWasmClie
 
   // Setup signer
   const offlineSigner = await window.getOfflineSignerAuto(config.chainId);
+
+  // Init SigningCosmWasmClient client
+  const signingClient = await SigningCosmWasmClient.connectWithSigner(config.rpcEndpoint, offlineSigner, {
+    prefix,
+    gasPrice,
+  });
+
+  return signingClient;
+}
+
+/**
+ * (a) Web / Cosmostation
+ * Prompts cosmostation and returns a signing client after the user
+ * gave permissions.
+ *
+ * @param config
+ * @returns SigningCosmWasmClient
+ */
+export async function setupCosmostation(config: Config): Promise<SigningCosmWasmClient> {
+  const { prefix, gasPrice } = config;
+
+  // Setup signer
+  const offlineSigner = await getOfflineSigner(config.chainId);
 
   // Init SigningCosmWasmClient client
   const signingClient = await SigningCosmWasmClient.connectWithSigner(config.rpcEndpoint, offlineSigner, {

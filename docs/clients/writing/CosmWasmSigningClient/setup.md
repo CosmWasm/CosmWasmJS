@@ -20,6 +20,8 @@ Basically there are currently 4 different setup functions:
 | setupWebLedger  | This function is used to log in to web-based dApps with a ledger. (Without Keplr)                                                                                                             |
 | setupNodeLocal  | Herewith a local mnemonic can be used for signing.                                                                                                                                            |
 | setupNodeLedger | With the help of this function, a ledger device can be used in a node environment.                                                                                                            |
+| setupCosmostation   | This function is used to log in to dApps with Cosmostation. |
+
 
 ## Configuration
 
@@ -117,4 +119,23 @@ const config = {
 async function getClient() {
   return await setupWebLedger(config, TransportNodeHid);
 }
+```
+
+### Setup Web/Cosmostation
+
+```ts
+import { setupCosmostation } from "cosmwasm";
+
+const config = {
+  chainId: "cliffnet-1",
+  rpcEndpoint: "https://rpc.cliffnet.cosmwasm.com:443/",
+  prefix: "wasm",
+};
+
+async function main() {
+  const client = await setupCosmostation(config);
+  console.log(client);
+}
+
+main();
 ```

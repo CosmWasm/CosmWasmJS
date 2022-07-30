@@ -86,6 +86,25 @@ async function main() {
 main();
 ```
 
+### Connect with Cosmostation and get a signing starget client
+
+```ts
+import { setupCosmostation } from "cosmwasm";
+
+const config = {
+  chainId: "cliffnet-1",
+  rpcEndpoint: "https://rpc.cliffnet.cosmwasm.com:443/",
+  prefix: "wasm",
+};
+
+async function main() {
+  const client = await setupCosmostation(config);
+  console.log(client);
+}
+
+main();
+```
+
 ### Interacting with contracts
 
 ```ts
