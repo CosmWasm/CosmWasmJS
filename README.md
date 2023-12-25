@@ -1,3 +1,11 @@
+# Unmaintained ⚠️
+
+CosmWasmJS is outdated and unmaintained. See https://medium.com/cosmwasm/dev-note-2-why-we-are-sunsetting-cosmwasmjs-61d8706418e6.
+There is no 1:1 alternative but https://cosmology.tech/ might be a helpful resource for bootstrapping dapps with wallet connections.
+The code here serves as a historical reference. We hope it is useful one way or another.
+
+--------------------
+
 <h1><p align="center"><img alt="CosmJS" src="docs/logo.png" width="180" /></p></h1>
 
 <div align="center">
